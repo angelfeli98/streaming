@@ -1,0 +1,127 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">
+                <span data-feather="home"></span>
+                Dashboard <span class="sr-only">(current)</span>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" routerLink='/'>
+                <span data-feather="file"></span>
+                <!-- <i class="material-icons">explore</i> -->
+                Browse
+              </a>
+            </li>
+            
+          </ul>
+  
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>library</span>
+            <a class="d-flex align-items-center text-muted" href="#">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <!-- <li class="nav-item align-items-center d-flex">
+              <a class="nav-link" routerLink="/music/artists">
+                <span data-feather="file-text"></span>
+                Artists
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Albums
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file-text"></span>
+                Songs
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/music/playlist">
+                <span data-feather="file-text"></span>
+                Playlists
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          
+          <h3>{{ name_playlist }}</h3>
+          
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">nombre</th>
+              <th scope="col">artista</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of canciones; let i = index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{item.nombre}}</td>
+              <td>{{item.artista}}</td>
+              <td>
+                <button class="btn btn-success btn-sm " (click)="playAudio(item._id)" >play</button>
+                <button class="btn btn-outline-danger btn-sm " (click)="delTrack(item._id)" >delete</button>
+              
+              </td>
+              <!-- <td><button>agregar</button></td> -->
+  
+              <!-- play_arrow -->
+            </tr>
+            
+          </tbody>
+        </table>
+  
+  
+  
+        <!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h3>{{name_playlist}}</h3> 
+        </div>
+        
+        <div class="card-group">
+  
+          <div *ngFor="let item of casas" class="card bg-primary text-white" style="width: 18rem;">
+              <a routerLink='/music/house-record/detail/{{item._id}}'>
+                <img class="card-img-top" src="data:image/jpg;base64,{{item.foto}}" alt="Card image cap">
+              </a>
+              <div class="card-body">
+                <p class="card-text">{{item.nombre}}</p>
+              </div>
+            </div>
+        </div>
+  
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h3>House records</h3> 
+        </div> -->
+        
+        
+      </main>
+  
+  
+    </div>
+  
+  </div>
+  <div>
+  
+    <router-outlet></router-outlet>
+  </div>
+  
+  
+  
+  

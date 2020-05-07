@@ -1,0 +1,49 @@
+<div class="tag-playmusic bg-dark">
+    <audio id="myTune" controls>
+        <!-- <source src="http://http://ec2-18-224-151-212.us-east-2.compute.amazonaws.com:3005/tracks/5cfa921f4af5626c7c17dde6"> -->
+            <!-- <source src="{{audio}}"> -->
+    </audio>
+
+    <div class="playmusic-info">
+        <div class="imgPlayMusic">
+            <!-- <img src="./images/singer/s8.jpg" alt=""> -->
+            <img  src="data:image/png;base64,{{image}}" alt="First slide">
+
+        </div>
+        <div class="textPlayMusic">
+            <a href="#" class="playmusic-name">{{name_song}}</a>
+            <a href="#" class="playmusic-artist">{{name_artists}}</a>
+        </div>
+    </div>
+    <div class="playmusic-time">
+        <label id="playmusic-start">{{playmusic_start}}</label>
+        <progress id="playmusic-process" value="50" max="100"></progress>
+        <label id="playmusic-end">{{ playmusic_end }}</label>
+    </div>
+    <div class="playmusic-button">
+        <button id="playmusic-prev">
+            <i class="material-icons">fast_rewind</i>
+        </button>
+        <button id="playButton" (click)="playAudio()">
+            <i *ngIf="!isPlay" class="material-icons">play_arrow</i>
+            <i *ngIf="isPlay" class="material-icons">pause</i>
+        </button>
+        <button id="playmusic-next">
+            <i class="material-icons">fast_forward</i>
+        </button>
+        <button id="loopButton">
+            <i class="material-icons">replay</i>
+        </button>
+        
+        <div id="volume" >
+        
+
+            <button id="volumeButton">
+                <i class="material-icons">volume_up</i>
+            </button>
+            <progress id="volumeProBar" value="100" max="100">
+            
+            </progress>
+        </div>
+    </div>
+</div>
