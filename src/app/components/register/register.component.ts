@@ -17,7 +17,7 @@ enableProdMode();
 })
 export class RegisterComponent implements OnInit {
 
-  private user: User;
+  public user: User;
   
   constructor(private authenticationService: AuthenticationService, 
               private toastr: ToastrService,
