@@ -1124,7 +1124,7 @@ var TrackControlsComponent = /** @class */ (function () {
             .subscribe(function (message) {
             console.log(message.text);
             // let audio = new Audio();
-            _this.audio.src = "http://ec2-34-239-127-135.compute-1.amazonaws.com:3005/tracks/" + message.text;
+            _this.audio.src = "http://ec2-100-25-47-78.compute-1.amazonaws.com:3005/tracks/" + message.text;
             _this.audio.load();
             _this.audio.play();
             _this.dataService.getTrackDetail(message.text)
@@ -1537,7 +1537,7 @@ var AuthenticationService = /** @class */ (function () {
     function AuthenticationService(http, toastr) {
         this.http = http;
         this.toastr = toastr;
-        this.URL_GLOBAL_API = 'http://ec2-18-234-166-21.compute-1.amazonaws.com:7070/api/';
+        this.URL_GLOBAL_API = 'http://ec2-100-25-47-78.compute-1.amazonaws.com:7070/api/';
         this.options = { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json') };
         this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_4__["BehaviorSubject"](JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
@@ -1625,7 +1625,7 @@ __webpack_require__.r(__webpack_exports__);
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
-        this.URL_GLOBAL_API = 'http://ec2-3-83-135-155.compute-1.amazonaws.com:7070/api/';
+        this.URL_GLOBAL_API = 'http://ec2-100-25-47-78.compute-1.amazonaws.com:7060/api/';
         this.options = { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set('Content-Type', 'application/json') };
     }
     DataService.prototype.getDiscographyHouse = function () {

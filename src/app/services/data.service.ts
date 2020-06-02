@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class DataService {
 
   constructor(private http: HttpClient) { }
-  readonly URL_GLOBAL_API = 'http://ec2-3-83-135-155.compute-1.amazonaws.com:7070/api/';
+  readonly URL_GLOBAL_API = 'http://ec2-100-25-47-78.compute-1.amazonaws.com:7060/api/';
   private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 
   getDiscographyHouse(){

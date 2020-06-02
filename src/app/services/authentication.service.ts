@@ -25,7 +25,7 @@ export class AuthenticationService {
     this.currentUser = this.currentUserSubject.asObservable();
    }
 
-  readonly URL_GLOBAL_API = 'http://ec2-18-234-166-21.compute-1.amazonaws.com:7070/api/';
+  readonly URL_GLOBAL_API = 'http://ec2-100-25-47-78.compute-1.amazonaws.com:7070/api/';
 
   private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
 

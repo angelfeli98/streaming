@@ -42,7 +42,7 @@ export class TrackControlsComponent implements OnInit {
 
     // let audio = new Audio();
     
-    this.audio.src = "http://ec2-34-239-127-135.compute-1.amazonaws.com:3005/tracks/" + message.text;
+    this.audio.src = "http://ec2-100-25-47-78.compute-1.amazonaws.com:3005/tracks/" + message.text;
     
     
     this.audio.load();
